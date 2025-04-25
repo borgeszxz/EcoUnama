@@ -54,8 +54,6 @@ O arquivo `data/database.php` cuida da conexão com o banco.
 
 - 📥 **Registro de Resíduos**: Alunos podem registrar tipo, quantidade e curso.
 - 📊 **Histórico de Entregas**: Visualização do histórico por aluno ou turma.
-- 📄 **Relatórios**: Geração de relatórios por tipo de resíduo, curso, ou período.
-- 👨‍🎓 **Login do Aluno**: Sistema de navegação por turnos, turmas e unidades.
 - 🔄 **Feedback Visual**: Alertas e mensagens após envio dos dados com loading.
 
 ---

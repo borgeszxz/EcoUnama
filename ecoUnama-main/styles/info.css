@@ -1,0 +1,44 @@
+.fitaInformacao {
+    width: 100%;
+    min-height: 90px;
+    background-color: rgb(41, 41, 41);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    box-sizing: border-box;
+    text-align: center;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.containerPalavras {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    font-family: "Poppins", sans-serif;
+}
+
+.containerPalavras h6 {
+    color: white;
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 400;
+    width: auto;
+}
+
+.containerPalavras .verde {
+    color: #00df81;
+}
+
+/* Responsivo para telas menores */
+@media (max-width: 768px) {
+    .containerPalavras {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .containerPalavras h6 {
+        font-size: 1rem;
+    }
+}

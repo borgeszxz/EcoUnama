@@ -1,0 +1,256 @@
+body {
+    background-color: rgba(28, 29, 36, 1);
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    font-family: "Poppins", sans-serif;
+    margin: 0; /* Para garantir que o layout ocupe toda a altura da tela */
+}
+
+.sidebar {
+    background-color: rgb(42, 43, 53);
+    color: white;
+    height: 100vh; /* Fixando a sidebar na tela */
+    width: 85px;
+    transition: width 0.3s ease;
+    position: fixed; /* Mantendo a sidebar fixa */
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 2; /* Para garantir que a sidebar fique acima do conteúdo da main */
+}
+
+.sidebar.open {
+    width: 220px; /* Expansão da sidebar */
+}
+
+.toggle-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+/* Estilo para a logo e perfil */
+.sidebar .logo {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Estilos para o perfil */
+.sidebar .profile {
+    text-align: center;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: opacity 0.3s ease;
+}
+
+/* Foto de perfil */
+.profile-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.profile-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Nome do usuário */
+.username {
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    display: none; /* Inicialmente escondido */
+}
+
+/* Quando a sidebar estiver aberta, mostre o nome do usuário */
+.sidebar.open .username {
+    display: block;
+}
+
+/* Quando a sidebar estiver pequena, esconder o perfil */
+.sidebar:not(.open) .profile {
+    opacity: 0;
+    pointer-events: none; /* Para que não seja clicável */
+    visibility: hidden; /* Escondendo o perfil completamente */
+}
+
+/* Estilo para a sidebar pequena */
+.sidebar {
+    width: 85px;
+}
+
+.sidebar.open {
+    width: 300px;
+}
+
+/* Ocultar as labels quando a sidebar estiver fechada */
+.sidebar:not(.open) .label {
+    display: none; /* Escondendo as labels */
+}
+
+/* Mostrar as labels quando a sidebar estiver aberta */
+.sidebar.open .label {
+    display: block; /* Exibindo as labels */
+}
+
+.sidebar ul {
+    list-style: none;
+    margin-top: 30px;
+}
+
+.sidebar ul li {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    gap: 15px;
+    cursor: pointer;
+    color: #cbd5e1;
+    transition: background 0.3s;
+}
+
+.sidebar ul li:hover,
+.sidebar ul li.active {
+    background-color: #00df81;
+    color: white;
+}
+
+.sidebar i {
+    font-size: 1.2rem;
+}
+
+.label {
+    white-space: nowrap;
+}
+
+/* Adicionando os botões no final da sidebar */
+.sidebar-footer {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    visibility: hidden; /* Inicialmente escondido */
+}
+
+/* Botões */
+.sidebar-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* Estilo quando os botões estão visíveis */
+.sidebar.open .sidebar-footer {
+    visibility: visible; /* Mostra os botões quando a sidebar estiver aberta */
+}
+
+.sidebar-btn:hover {
+    background-color: #444;
+    border-radius: 5px;
+}
+
+
+
+/* Formulário */
+.form-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Garantir que o formulário ocupe toda a largura disponível */
+    max-width: 500px; /* Limita o tamanho máximo do formulário */
+    margin: 0 auto; /* Centraliza o formulário */
+}
+
+/* Título do formulário */
+.header-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Formulário e inputs */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Botão do formulário */
+.form-group button {
+    padding: 10px 20px;
+    background-color: #00df81;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.form-group button:hover {
+    background-color: #00df82c2;
+}
+
+/* Estilo para a imagem de cabeçalho */
+.header-img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Estilo para o texto motivador */
+.motivational-text {
+    margin-top: 30px; /* Espaçamento entre o formulário e o texto */
+    padding: 20px;
+    background-color: rgba(28, 29, 36, 1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.motivational-text h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+}
+
+.motivational-text p {
+    font-size: 1rem;
+    color: white;
+    line-height: 1.6;
+}
+
+.verde {
+    color: #00df81;
+}

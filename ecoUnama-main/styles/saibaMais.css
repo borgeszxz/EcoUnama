@@ -1,0 +1,108 @@
+.saibaMais {
+  width: 100%;
+  background-color: rgb(28, 29, 36);
+  padding: 2rem 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.iconSimble {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.3));
+  object-fit: contain;
+}
+
+.boxSaiba {
+  color: #ffffff;
+  padding: 1rem;
+}
+
+.boxSaiba h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.boxSaiba h6 {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.verde {
+  color: #00df81;
+}
+
+.btnWrapperAnimado {
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
+}
+
+.btnLinkAnimado {
+  position: relative;
+  width: fit-content;
+}
+
+.btnLinkAnimado a {
+  display: block;
+  width: 250px;
+  height: 50px;
+  line-height: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  background: #333;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 3px solid #333;
+  transition: all 0.35s;
+  position: relative;
+  z-index: 1;
+}
+
+.btnIconAnimado {
+  width: 50px;
+  height: 50px;
+  border: 3px solid transparent;
+  position: absolute;
+  transform: rotate(45deg);
+  right: 0;
+  top: 0;
+  z-index: 0;
+  transition: all 0.35s;
+}
+
+.btnIconAnimado svg {
+  width: 30px;
+  position: absolute;
+  top: calc(50% - 15px);
+  left: calc(50% - 15px);
+  transform: rotate(-45deg);
+  fill: #2ecc71;
+  transition: all 0.35s;
+}
+
+.btnLinkAnimado:hover a {
+  width: 200px;
+  border: 3px solid #2ecc71;
+  background: transparent;
+  color: #2ecc71;
+}
+
+.btnLinkAnimado:hover .btnIconAnimado {
+  border: 3px solid #2ecc71;
+  right: -25%;
+}
